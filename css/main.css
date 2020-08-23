@@ -1,0 +1,92 @@
+*, *:after,*:before {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+}
+.container  {
+    text-align: center;
+    padding-top: 25px;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/henry-be-IicyiaPYGGI-unsplash.jpg") 0 0 no-repeat;
+    background-size: cover;
+}
+.bg {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0 10px 10px 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+.cardList {
+    margin: 15px auto;
+    width: 640px;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.cardList li {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.cardFace {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+    border: 1px solid #d9d9d9;
+}
+.front {
+    border-radius: 5%;
+    background: url("../images/evie-s-vbA1HNW-APA-unsplash.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+.back {
+    border-radius: 5%;
+    transform: rotateY(180deg);
+    background-image: url("../images/animalImages.png");
+    background-size: 870px;
+    background-position: 0 0;
+    background-color: #fff;
+}
+.cardList li.on {
+    transform: rotateY(180deg);
+}
+.cardList li.complete {
+    opacity: 0;
+    transition: 1s ease
+}
+.cardList li.complete .back, .cardList li.complete .front {
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.lifeList li i {
+    font-size-adjust: 24px;
+}
+.lifeList {
+    display: flex;
+    justify-content: center;
+}
+.lifeList p {
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+.lifeList .lifeCount {
+    display: flex;
+}
+.lifeList .lifeCount i {
+    font-size: 3rem;
+    color: rgb(226, 0, 0);
+}
